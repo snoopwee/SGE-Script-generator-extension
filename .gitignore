@@ -7,3 +7,6 @@ out/
 !.env.example
 *.log
 .DS_Store
+
+# Local working docs (not for remote)
+TRANSCRIPT_EXTENSION_PLAN.md
