@@ -1,0 +1,50 @@
+{
+  "name": "transcript-ext",
+  "displayName": "YouTube Transcript Companion",
+  "version": "0.1.0",
+  "description": "Injects a live transcript sidebar on YouTube with active-line tracking, furigana for Japanese, and translation to EN/VI/JP.",
+  "author": "snoopwee",
+  "scripts": {
+    "dev": "plasmo dev",
+    "dev:firefox": "plasmo dev --target=firefox-mv2",
+    "build": "plasmo build",
+    "build:firefox": "plasmo build --target=firefox-mv2",
+    "package": "plasmo package",
+    "package:firefox": "plasmo package --target=firefox-mv2"
+  },
+  "dependencies": {
+    "kuroshiro": "^1.2.0",
+    "kuroshiro-analyzer-kuromoji": "^1.1.0",
+    "plasmo": "0.88.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.258",
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "typescript": "5.3.3"
+  },
+  "manifest": {
+    "name": "YouTube Transcript Companion",
+    "permissions": [
+      "storage",
+      "clipboardWrite",
+      "activeTab"
+    ],
+    "host_permissions": [
+      "https://www.youtube.com/*",
+      "https://*.youtube.com/*",
+      "https://api.mymemory.translated.net/*",
+      "https://libretranslate.com/*",
+      "https://unpkg.com/*"
+    ],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "transcript-companion@snoopwee.dev",
+        "strict_min_version": "109.0"
+      }
+    }
+  }
+}
